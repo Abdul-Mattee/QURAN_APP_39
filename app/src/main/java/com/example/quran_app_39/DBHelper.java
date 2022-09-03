@@ -97,4 +97,13 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         return allSurahs;
     }
+    public int getSurahAyatCount(int surahId){
+        openDatabase();
+        Cursor cursor = myDataBase.rawQuery("Select AyaNo from tayah where SuraID= " + surahId + " order by AyaNo desc limit 1", null);
+        int totalAyat = 0;
+        if(cursor.moveToFirst()){
+            totalAyat = Integer.parseInt(cursor.getString(0));
+        }
+        return totalAyat;
+    }
 }

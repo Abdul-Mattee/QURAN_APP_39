@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -39,9 +40,15 @@ public class SurahListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        DBHelper db = new DBHelper(c);
          view= inflater.inflate(R.layout.activity_surah_list_view, null);
-        TextView textView = view.findViewById(R.id.surahNameView);
-        textView.setText(allSurahs.get(i));
+        TextView surahName = view.findViewById(R.id.surahNameView);
+        TextView ayatCountView = view.findViewById(R.id.ayatConuter);
+        surahName.setText(allSurahs.get(i));
+        int ayatCount = db.getSurahAyatCount(i+1);
+        ayatCountView.setText("آيات : " + String.valueOf(ayatCount));
+//        Toast.makeText(c, ayatCount, Toast.LENGTH_SHORT);
+//        ayatCount.setText(String.valueOf(db.getSurahAyatCount(i-1)));
         return view;
     }
 }
