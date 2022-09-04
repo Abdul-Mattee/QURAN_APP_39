@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.195" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_surah_list_view.xml" value="0.5" />
-        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/ayat.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/menu_header.xml" value="0.14945652173913043" />
+        <entry key="app/src/main/res/layout/surah.xml" value="0.3834900731452456" />
+        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.67" />
       </map>
     </option>
   </component>

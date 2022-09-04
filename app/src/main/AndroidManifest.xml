@@ -16,6 +16,8 @@
         <activity
             android:name=".SurahListAdapter"
             android:exported="false" />
+        <activity android:name=".SurahActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

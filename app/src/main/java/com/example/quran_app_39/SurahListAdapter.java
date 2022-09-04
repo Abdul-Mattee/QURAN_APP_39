@@ -47,8 +47,6 @@ public class SurahListAdapter extends BaseAdapter {
         surahName.setText(allSurahs.get(i));
         int ayatCount = db.getSurahAyatCount(i+1);
         ayatCountView.setText("آيات : " + String.valueOf(ayatCount));
-//        Toast.makeText(c, ayatCount, Toast.LENGTH_SHORT);
-//        ayatCount.setText(String.valueOf(db.getSurahAyatCount(i-1)));
         return view;
     }
 }

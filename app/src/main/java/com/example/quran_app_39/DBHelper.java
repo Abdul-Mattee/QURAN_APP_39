@@ -106,4 +106,28 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return totalAyat;
     }
+    public ArrayList<String> getSurahById(int surahId){
+        openDatabase();
+        Cursor cursor = myDataBase.rawQuery("Select Arabic_Text from tayah where SuraID= "+ surahId, null);
+        ArrayList<String> surah = new ArrayList<String>();
+        if (cursor.moveToFirst()) {
+            do {
+                surah.add(new String(cursor.getString(0)));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return surah;
+    }
+    public ArrayList<String> getSurahTranslation(int surahId, String translation){
+        openDatabase();
+        Cursor cursor = myDataBase.rawQuery("Select " + translation + " from tayah where SuraID= "+ surahId, null);
+        ArrayList<String> surahTranslation = new ArrayList<String>();
+        if (cursor.moveToFirst()) {
+            do {
+                surahTranslation.add(new String(cursor.getString(0)));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return surahTranslation;
+    }
 }

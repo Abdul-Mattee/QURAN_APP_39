@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/englishTranslation"
-        android:title="Surah in English" />
+        android:id="@+id/allSurahs"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"
+        android:title="All Surahs" />
     <item
         android:id="@+id/urduTranslation"
-        android:title="Surah in Urdu"/>
+        android:title="Tanslation in Urdu"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/engTranslation"
+        android:title="Translation in Eng"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"
+        />
     <item
         android:id="@+id/noTranslation"
-        android:title="Only Arabic"/>
+        android:title="No Translation"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"
+        />
 </menu>
